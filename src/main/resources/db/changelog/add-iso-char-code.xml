@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="add_iso_char_code" author="skillbox">
+        <addColumn tableName="currency">
+            <column name="iso_char_code" type="varchar(3)" defaultValue=""/>
+        </addColumn>
+        <comment>Добавление буквенного кода ISO для валют</comment>
+    </changeSet>
+
+</databaseChangeLog>

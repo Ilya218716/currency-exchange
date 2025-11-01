@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "currency")
 public class Currency {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence")
@@ -31,4 +32,6 @@ public class Currency {
     @Column(name = "iso_num_code")
     private Long isoNumCode;
 
+    @Column(name = "iso_char_code")
+    private String isoCharCode;
 }
